@@ -1,0 +1,57 @@
+body {
+  background: #D34F73;
+  color: #3F292B;
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 70px;
+  font-family: "lobster";
+}
+
+.panel{
+  max-width: 430px;
+  border-radius: 10px;
+  border-color: #3F292B;
+  border-width: 5px;
+  background-color: #DBBEA1;
+}
+
+.btn {
+  min-width: 35px;
+  height: 35px;
+}
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.lengths {
+  margin: 5px;
+  height: 35px;
+}
+
+.lengths .btn {
+  margin-left: 5px;
+}
+
+.float-right {
+  float: right;
+}
+
+#main{
+  margin: 10px 0;
+}
+
+#timer {
+  font-size: 32px;
+}
+
+
+
+#ponies img {
+  margin: 5px;
+  text-align: center;
+}

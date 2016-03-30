@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Ponydoro, the flexible pony pomodoro timer</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <h1 class="text-center">Ponydoro!</h1>
+<h2 class="text-center small">(The AngularJS pomodoro timer with ponies)</h2>
+
+<div class="panel panel-default center">
+  <div class="panel-body">
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <div class="lengths">
+        Session Length:
+        <button id="workdown" class="btn btn-default float-right" ng-click="workdown()">-</button>
+        <button id="workup" class="btn btn-default float-right" ng-click="workup()">+</button>
+        <span class="float-right">{{work}}:00</span>
+      </div>
+      <div class="lengths">
+        Break Length:
+        <button id="breakdown" class="btn btn-default float-right" ng-click="breakdown()">-</button>
+        <button id="breakup" class="btn btn-default float-right" ng-click="breakup()">+</button>
+        <span class="float-right">{{break}}:00</span>
+      </div>
+
+      <div id="main" class="text-center">
+        <div id="timer">{{clock || 'Click Start to begin'}}</div>
+        <button id="startbutton" class="btn btn-default" ng-disabled="startbutton" ng-click="start()">Start</button>
+        <button class="btn btn-default" ng-click="stop()">Stop</button>
+      </div>
+      
+      <div id="ponycontainer" ng-show="pony > 0">
+        <div id="ponytitle">You've earned {{pony}} {{ponyplur}}!</div>
+        <span id ="ponies" ng-repeat="stuff in ponies"><img class='pony' src='{{stuff.img}}'/></span>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
